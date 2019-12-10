@@ -20,7 +20,6 @@ class YoloLayer(Layer):
         self.xywh_scale     = xywh_scale
         self.class_scale    = class_scale        
 
-        # make a persistent mesh grid
         max_grid_h, max_grid_w = max_grid
 
         cell_x = tf.to_float(tf.reshape(tf.tile(tf.range(max_grid_w), [max_grid_h]), (1, max_grid_h, max_grid_w, 1, 1)))
