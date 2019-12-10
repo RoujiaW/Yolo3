@@ -1,4 +1,4 @@
-# Yolo3
+# Yolov3 on Blood Cell Detection
 Blood Cell Detection with Yolov3
 
 This code implements yolov3 from papers
@@ -17,9 +17,9 @@ To perform blood cell detection, download the datasets and change the image file
 * Retrain the Yolo V3 model using pretrained darknet53 convolution layers([darknet53.conv.74](https://pjreddie.com/media/files/darknet53.conv.74)) ```Yolov3_Training.ipynb```
 
 ## Outputs 
-![Ground Truth](https://github.com/zil317/Yolo3//Yolo3/Results/ground_truth.png)
+![Ground Truth](https://github.com/zil317/Yolo3/blob/master/results/ground_truth.png)
 
-![Detected Image](https://github.com/zil317/Yolo3/Yolo3/Results/blood_cell_detected.png)
+![Detected Image](https://github.com/zil317/Yolo3/blob/master/results/blood_cell_detected.png)
 
 ## Limitations
 The current training process is image by image. Lots of noises found around the edges of the image. Noise reduction algorithm could be applied around the edge to improve detection accuracy.
