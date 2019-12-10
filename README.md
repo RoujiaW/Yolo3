@@ -16,17 +16,15 @@ To perform blood cell detection, download the datasets and change the image file
 * Detect BCCD images using pretrained model ``` Yolov3_Detection.ipynb ```
 * Retrain the Yolo V3 model using pretrained darknet53 convolution layers([darknet53.conv.74](https://pjreddie.com/media/files/darknet53.conv.74)) ```Yolov3_Training.ipynb```
 
-##Outputs 
-![Ground Truth]
-(http://zil317.github.com/Yolo3/Results/ground_truth.png)
+## Outputs 
+![Ground Truth](http://zil317.github.com/Yolo3/Results/ground_truth.png)
 
-![Detected Image]
-(http://zil317.github.com/Yolo3/Results/blood_cell_detected.png)
+![Detected Image](http://zil317.github.com/Yolo3/Results/blood_cell_detected.png)
 
-##Limitations
+## Limitations
 The current training process is image by image. Lots of noises found around the edges of the image. Noise reduction algorithm could be applied around the edge to improve detection accuracy.
 
-##Acknowledgement 
+## Acknowledgement 
 https://github.com/qqwweee/keras-yolo3
 
 
