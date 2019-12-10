@@ -12,7 +12,7 @@ class YoloLayer(Layer):
                     **kwargs):
         # make the model settings persistent
         self.ignore_thresh  = ignore_thresh
-        self.warmup_batches = warmup_batches
+        self.warmup.        = warmup_batches
         self.anchors        = tf.constant(anchors, dtype='float', shape=[1,1,1,3,2])
         self.grid_scale     = grid_scale
         self.obj_scale      = obj_scale
@@ -30,7 +30,7 @@ class YoloLayer(Layer):
         super(YoloLayer, self).__init__(**kwargs)
 
     def build(self, input_shape):
-        super(YoloLayer, self).build(input_shape)  # Be sure to call this somewhere!
+        super(YoloLayer, self).build(input_shape)  
 
     def call(self, x):
         input_image, y_pred, y_true, true_boxes = x
@@ -150,7 +150,7 @@ class YoloLayer(Layer):
         """
         batch_seen = tf.assign_add(batch_seen, 1.)
         
-        true_box_xy, true_box_wh, xywh_mask = tf.cond(tf.less(batch_seen, self.warmup_batches+1), 
+        true_box_xy, true_box_wh, xywh_mask = tf.cond(tf.less(batch_seen, self.warmup+1), 
                               lambda: [true_box_xy + (0.5 + self.cell_grid[:,:grid_h,:grid_w,:,:]) * (1-object_mask), 
                                        true_box_wh + tf.zeros_like(true_box_wh) * (1-object_mask), 
                                        tf.ones_like(object_mask)],
