@@ -17,8 +17,10 @@ To perform blood cell detection, download the datasets and change the image file
 * Retrain the Yolo V3 model using pretrained darknet53 convolution layers([darknet53.conv.74](https://pjreddie.com/media/files/darknet53.conv.74)) ```Yolov3_Training.ipynb```
 
 ## Outputs 
+Ground Truth
 ![Ground Truth](https://github.com/zil317/Yolo3/blob/master/results/ground_truth.png)
 
+Detected Image
 ![Detected Image](https://github.com/zil317/Yolo3/blob/master/results/blood_cell_detected.png)
 
 ## Limitations
@@ -26,6 +28,8 @@ The current training process is image by image. Lots of noises found around the 
 
 ## Acknowledgement 
 https://github.com/qqwweee/keras-yolo3
+https://github.com/experiencor/keras-yolo2
+@Ouwen
 
 
 
